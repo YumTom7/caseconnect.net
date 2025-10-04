@@ -3,81 +3,106 @@
 /* ------------------------------------------------------------------- */
 
 body {
-    background-color: #000; /* Fondo negro */
-    color: #fff; /* Texto blanco para toda la página */
-    font-family: Arial, sans-serif; /* Fuente consistente en toda la página */
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
     margin: 0;
     
-    /* Centrado completo del contenido en la pantalla */
+    /* CENTRADO PERFECTO DE CONTENIDO */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh; 
     text-align: center;
+    
+    /* Importante para el centrado horizontal en móviles */
+    width: 100%; 
+    overflow-x: hidden; /* Evita barras de desplazamiento horizontal */
 }
 
 .container {
-    max-width: 800px;
+    max-width: 100%; /* Ajuste a 100% de ancho del dispositivo */
     padding: 20px;
 }
 
 /* ------------------------------------------------------------------- */
-/* ESTILO DEL LOGO (TEXTUAL) */
+/* ESTILO DEL LOGO (TEXTUAL) - BASE PARA GRANDES PANTALLAS */
 /* ------------------------------------------------------------------- */
 
 .logo-text {
-    /* Estilo del logo para replicar el diseño azul brillante y grande */
-    font-size: 8em; 
+    /* Tamaño para PANTALLAS GRANDES (Laptop/Desktop) */
+    font-size: 8em; /* Mantener 8em como base en pantallas grandes */
     font-weight: bold;
-    color: #007bff; /* Color azul brillante */
-    margin-bottom: 20px; 
-    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+    /* El centrado ya viene del body, pero lo reforzamos */
+    text-align: center; 
+    
+    /* Evita que el logo se salga en pantallas pequeñas por ser demasiado ancho */
+    word-wrap: break-word; 
 }
 
 /* ------------------------------------------------------------------- */
-/* ESTILO DEL MENSAJE DE BIENVENIDA */
+/* ESTILO ADAPTABLE (MEDIA QUERIES) */
+/* ------------------------------------------------------------------- */
+
+/* Adaptación para TABLETAS (Pantallas de 768px o menos) */
+@media (max-width: 768px) {
+    .logo-text {
+        /* Reduce el tamaño del logo para tabletas */
+        font-size: 6em; 
+    }
+}
+
+/* Adaptación para TELÉFONOS (Pantallas de 480px o menos) */
+@media (max-width: 480px) {
+    .logo-text {
+        /* Reduce drásticamente el tamaño del logo para móviles */
+        font-size: 3.5em; 
+    }
+    
+    .button {
+        /* Asegura que los botones sean un poco más flexibles en móviles */
+        min-width: 90%; /* Ocupa casi todo el ancho disponible */
+        font-size: 1.1em;
+    }
+    
+    .welcome-message {
+        font-size: 1.2em;
+    }
+}
+
+/* ------------------------------------------------------------------- */
+/* RESTO DE ESTILOS (SIN CAMBIOS) */
 /* ------------------------------------------------------------------- */
 
 .welcome-message {
-    /* Mantiene la fuente de la página y usa color blanco */
-    font-size: 1.5em; 
-    margin-bottom: 40px; 
-    color: #fff; /* Asegura el color blanco */
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    color: #fff;
 }
-
-/* ------------------------------------------------------------------- */
-/* ESTILO DE BOTONES */
-/* ------------------------------------------------------------------- */
 
 .button-group {
     display: flex;
-    flex-direction: column; 
-    gap: 15px; 
+    flex-direction: column;
+    gap: 15px;
     align-items: center;
-    margin-top: 20px; 
+    margin-top: 20px;
 }
 
 .button {
-    /* Diseño ovalado consistente */
     display: inline-block;
     padding: 15px 40px;
-    background-color: #007bff; 
+    background-color: #007bff;
     color: #fff;
     text-decoration: none;
-    border-radius: 30px; 
+    border-radius: 30px;
     font-size: 1.2em;
     transition: background-color 0.3s ease;
     min-width: 200px;
-    /* Asegura que los textos de los botones usen la misma fuente */
-    font-family: inherit; 
+    font-family: inherit;
 }
 
 .button:hover {
     background-color: #0056b3;
 }
-
-
-
-
-
-

@@ -7,53 +7,53 @@ body {
     display: flex; /* Para centrar el contenido vertical y horizontalmente */
     justify-content: center; /* Centrado horizontal */
     align-items: center; /* Centrado vertical */
-    min-height: 100vh; /* Asegura que ocupe al menos el 100% de la altura de la ventana */
-    text-align: center; /* Centrar el texto dentro del body */
+    min-height: 100vh; /* 100% de la altura de la ventana */
+    text-align: center;
 }
 
-/* Contenedor Principal para centrar todo el contenido */
+/* Contenedor Principal */
 .container {
-    max-width: 800px; /* Ancho máximo del contenedor */
+    max-width: 800px; 
     padding: 20px;
 }
 
-/* Estilo del Logo */
-.logo {
-    width: 250px; /* Ajusta el tamaño del logo si es necesario */
-    height: auto;
-    margin-bottom: 20px; /* Espacio debajo del logo */
-    display: block; /* Para centrarlo correctamente */
-    margin-left: auto;
-    margin-right: auto;
+/* Nuevo Estilo para el Logo de Texto */
+.logo-text {
+    font-size: 3.5em; /* Tamaño grande para que se vea como logo */
+    font-weight: bold;
+    color: #007bff; /* Color azul brillante del logo original */
+    margin-bottom: 20px; 
+    text-align: center;
 }
 
-/* Estilo del Mensaje de Bienvenida */
+/* Estilo del Mensaje de Bienvenida (Ahora más pequeño ya que el logo es texto) */
 .welcome-message {
-    font-size: 2em; /* Tamaño del texto del mensaje */
-    margin-bottom: 40px; /* Espacio debajo del mensaje */
+    font-size: 1.5em; /* Tamaño ajustado */
+    margin-bottom: 40px; 
 }
 
 /* Grupo de Botones */
 .button-group {
-    display: flex; /* Para poner los botones en una fila */
-    flex-direction: column; /* Cambiado a columna para que estén uno debajo del otro */
-    gap: 15px; /* Espacio entre los botones */
-    align-items: center; /* Centra los botones si flex-direction es column */
+    display: flex;
+    flex-direction: column; 
+    gap: 15px; 
+    align-items: center;
+    margin-top: 20px; /* Espacio extra debajo del mensaje */
 }
 
-/* Estilo de los Botones */
+/* Estilo de los Botones (sin cambios) */
 .button {
-    display: inline-block; /* Permite aplicar padding y margin */
-    padding: 15px 40px; /* Relleno para hacerlos ovalados */
-    background-color: #007bff; /* Color azul, puedes cambiarlo */
-    color: #fff; /* Texto blanco */
-    text-decoration: none; /* Quitar el subrayado del enlace */
-    border-radius: 30px; /* Hace los botones ovalados */
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #007bff; 
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px; 
     font-size: 1.2em;
-    transition: background-color 0.3s ease; /* Transición suave al pasar el ratón */
-    min-width: 200px; /* Ancho mínimo para que todos tengan tamaño similar */
+    transition: background-color 0.3s ease;
+    min-width: 200px;
 }
 
 .button:hover {
-    background-color: #0056b3; /* Color más oscuro al pasar el ratón */
+    background-color: #0056b3;
 }

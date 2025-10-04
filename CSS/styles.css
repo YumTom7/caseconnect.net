@@ -1,48 +1,64 @@
-/* General Body Styles */
+/* ------------------------------------------------------------------- */
+/* ESTILOS GLOBALES Y DE DISEÑO (BASE) */
+/* ------------------------------------------------------------------- */
+
 body {
     background-color: #000; /* Fondo negro */
-    color: #fff; /* Texto blanco */
-    font-family: Arial, sans-serif;
+    color: #fff; /* Texto blanco para toda la página */
+    font-family: Arial, sans-serif; /* Fuente consistente en toda la página */
     margin: 0;
-    display: flex; /* Para centrar el contenido vertical y horizontalmente */
-    justify-content: center; /* Centrado horizontal */
-    align-items: center; /* Centrado vertical */
-    min-height: 100vh; /* 100% de la altura de la ventana */
+    
+    /* Centrado completo del contenido en la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
     text-align: center;
 }
 
-/* Contenedor Principal */
 .container {
-    max-width: 800px; 
+    max-width: 800px;
     padding: 20px;
 }
 
-/* Nuevo Estilo para el Logo de Texto */
+/* ------------------------------------------------------------------- */
+/* ESTILO DEL LOGO (TEXTUAL) */
+/* ------------------------------------------------------------------- */
+
 .logo-text {
-    font-size: 3.5em; /* Tamaño grande para que se vea como logo */
+    /* Estilo del logo para replicar el diseño azul brillante y grande */
+    font-size: 3.5em; 
     font-weight: bold;
-    color: #007bff; /* Color azul brillante del logo original */
+    color: #007bff; /* Color azul brillante */
     margin-bottom: 20px; 
     text-align: center;
 }
 
-/* Estilo del Mensaje de Bienvenida (Ahora más pequeño ya que el logo es texto) */
+/* ------------------------------------------------------------------- */
+/* ESTILO DEL MENSAJE DE BIENVENIDA */
+/* ------------------------------------------------------------------- */
+
 .welcome-message {
-    font-size: 1.5em; /* Tamaño ajustado */
+    /* Mantiene la fuente de la página y usa color blanco */
+    font-size: 1.5em; 
     margin-bottom: 40px; 
+    color: #fff; /* Asegura el color blanco */
 }
 
-/* Grupo de Botones */
+/* ------------------------------------------------------------------- */
+/* ESTILO DE BOTONES */
+/* ------------------------------------------------------------------- */
+
 .button-group {
     display: flex;
     flex-direction: column; 
     gap: 15px; 
     align-items: center;
-    margin-top: 20px; /* Espacio extra debajo del mensaje */
+    margin-top: 20px; 
 }
 
-/* Estilo de los Botones (sin cambios) */
 .button {
+    /* Diseño ovalado consistente */
     display: inline-block;
     padding: 15px 40px;
     background-color: #007bff; 
@@ -52,6 +68,8 @@ body {
     font-size: 1.2em;
     transition: background-color 0.3s ease;
     min-width: 200px;
+    /* Asegura que los textos de los botones usen la misma fuente */
+    font-family: inherit; 
 }
 
 .button:hover {

@@ -27,7 +27,7 @@ body {
 
 .logo-text {
     /* Estilo del logo para replicar el diseño azul brillante y grande */
-    font-size: 18em; 
+    font-size: 50em; 
     font-weight: bold;
     color: #007bff; /* Color azul brillante */
     margin-bottom: 20px; 
@@ -75,4 +75,5 @@ body {
 .button:hover {
     background-color: #0056b3;
 }
+
 
